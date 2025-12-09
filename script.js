@@ -17,34 +17,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Form Submission (basic)
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form values
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const message = contactForm.querySelector('textarea').value;
-        
-        // Basic validation
-        if (!name || !email || !message) {
-            alert('Please fill in all fields');
-            return;
-        }
-        
-        // In a real application, you would send this data to a server
-        // For now, we'll just show an alert and reset the form
-        alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
-        contactForm.reset();
-        
-        // You can integrate with a service like Formspree or EmailJS here
-        // Example with EmailJS: 
-        // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this);
-    });
-}
-
 // Add scroll effect to navbar
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
